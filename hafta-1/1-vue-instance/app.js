@@ -11,6 +11,23 @@ const app = Vue.createApp({
                 alt: "mufredat-kablosuzkedi-vue-bootcamp",
             },
             owner: "Pogoca",
+            coords: {
+                x: 0,
+                y: 0,
+            },
         };
     },
+    methods : {
+        changeTitle(pTitle){
+            //this.title = "Değişmiş title."
+            this.title = pTitle
+        },
+        updateCoords(message, event){
+            //console.log(message, event.x, event.y);
+            this.coords = {
+                x: event.x,
+                y: event.y,
+            }
+        }
+    }
 }).mount("#app"); //bu vue.js uygulaması id si app olan elementin sınırları içerisinde çalışır.

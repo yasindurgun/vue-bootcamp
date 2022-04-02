@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
@@ -16,9 +17,21 @@
         <a v-bind:target="google.target"
            :href="google.url"
            :alt="google.alt"
-           :kablosuzkedi=""owner
+           :kablosuzkedi="owner"
           > {{google.title}}</a>
+
+          <br><br>
+
+          <button v-on:click="changeTitle('1.buton')">Title Değiştir</button>
+          <button v-on:click="changeTitle('2.buton')">Title 2 Değiştir</button>
+
+          <!-- Standart olarak gelen eventin yanı sıra kendime ait parametreleri de gönderebilirim. -->
+          <div @mousemove="updateCoords('mouseMooove', $event)" class="box" @click="changeTitle('Box clicked ')"></div>
+          
+          <span>{{ coords.x }},{{ coords.y }}</span>
     </div>
+
+    
     <script src="app.js"></script>
 </body>
 </html>
