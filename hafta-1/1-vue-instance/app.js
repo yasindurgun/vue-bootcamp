@@ -23,6 +23,8 @@ const app = Vue.createApp({
             this.title = pTitle
         },
         updateCoords(message, event){
+            //dışarıdan farklı bir fonksiyon da çağırabiliriz bu şekilde.
+            this.changeTitle(`${event.x}, ${event.y}`)
             //console.log(message, event.x, event.y);
             this.coords = {
                 x: event.x,
