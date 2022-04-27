@@ -1,3 +1,7 @@
 {
-    "workbench.colorTheme": "Monokai Dimmed"
+    "workbench.colorTheme": "Monokai Dimmed",
+    "eslint.options": {
+        "configFile": "C:\\Users\\yasin\\Desktop\\Vue.js_Youtube\\babel.config.js"
+    }
 }
+
